@@ -1,4 +1,5 @@
-﻿@model IEnumerable<ViewModelAspCore.Models.Student>
+﻿@* @model IEnumerable<ViewModelAspCore.Models.Student> *@
+@model ViewModelAspCore.Models.SchoolViewModel
 
 @{
     ViewData["Title"] = "Home Page";
@@ -19,13 +20,34 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var std in Model)
+        @foreach (var std in Model.Students)
         {
             <tr>
                 <td>@std.Id</td>
                 <td>@std.Name</td>
                 <td>@std.Age</td>
                 <td>@std.Grade</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Student ID</th>
+            <th>Student Name</th>
+            <th>Subject</th>
+            <th>Experience</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var std in Model.Teachers)
+        {
+            <tr>
+                <td>@std.Id</td>
+                <td>@std.Name</td>
+                <td>@std.Subject</td>
+                <td>@std.Experience</td>
             </tr>
         }
     </tbody>
