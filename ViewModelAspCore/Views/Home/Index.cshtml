@@ -1,0 +1,32 @@
+﻿@model IEnumerable<ViewModelAspCore.Models.Student>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Student ID</th>
+            <th>Student Name</th>
+            <th>Age</th>
+            <th>Grades</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var std in Model)
+        {
+            <tr>
+                <td>@std.Id</td>
+                <td>@std.Name</td>
+                <td>@std.Age</td>
+                <td>@std.Grade</td>
+            </tr>
+        }
+    </tbody>
+</table>
