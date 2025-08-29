@@ -37,6 +37,11 @@ namespace ViewModelAspCore.Controllers
             return View(schoolViewModel);
         }
 
+        public IActionResult About()
+        {
+          
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();

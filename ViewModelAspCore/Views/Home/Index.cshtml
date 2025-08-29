@@ -31,24 +31,5 @@
         }
     </tbody>
 </table>
-<table class="table">
-    <thead>
-        <tr>
-            <th>Student ID</th>
-            <th>Student Name</th>
-            <th>Subject</th>
-            <th>Experience</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var std in Model.Teachers)
-        {
-            <tr>
-                <td>@std.Id</td>
-                <td>@std.Name</td>
-                <td>@std.Subject</td>
-                <td>@std.Experience</td>
-            </tr>
-        }
-    </tbody>
-</table>
+
+<partial name="_TeacherViewModel"/>
