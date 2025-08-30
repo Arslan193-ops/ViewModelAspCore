@@ -1,23 +1,17 @@
-﻿
+﻿@model ViewModelAspCore.Models.SchoolViewModel
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Student ID</th>
-            <th>Student Name</th>
-            <th>Subject</th>
-            <th>Experience</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var std in Model.Teachers)
-        {
-            <tr>
-                <td>@std.Id</td>
-                <td>@std.Name</td>
-                <td>@std.Subject</td>
-                <td>@std.Experience</td>
-            </tr>
-        }
-    </tbody>
-</table>
+<h3>Students</h3>
+<ul>
+    @foreach (var student in Model.Students)
+    {
+        <li>@student.Name - Grade: @student.Grade</li>
+    }
+</ul>
+
+<h3>Teachers</h3>
+<ul>
+    @foreach (var teacher in Model.Teachers)
+    {
+        <li>@teacher.Name - Subject: @teacher.Subject</li>
+    }
+</ul>
